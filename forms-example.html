@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Forms in Html</title>
+</head>
+<body>
+
+<a href="https://www.google.com/search?hl=en&source=hp&ei=lC6CXZKeJYyctgXe3pigCA&q=fluffy+dogs&oq=fluffy+&gs_l=psy-ab.3.0.0l10.4045220.4048179..4053148...0.0..0.138.580.6j1......0....1..gws-wiz.......0i131.8J5t2UvdSDU">Fluffy Dogs Google Link</a>
+
+    <form method="post" action="https://request-inspector.glitch.me/">
+        <label for="username">Username</label>
+        <input id="username" name="user" type="text" placeholder="Enter Username" disabled>
+        <br>
+
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password" value="password">
+        <br>
+
+        <label for="body">Tell us how it's going?</label>
+        <br>
+        <textarea name="body" id="body" cols="30" rows="10" placeholder="Doing great!"></textarea>
+        <br>
+
+        <input type="checkbox" id="newsletter" name="newsletter" value="yes" checked> <label for="newsletter">Check this box to sign up for our newsletter today!</label>
+        <br>
+        <input type="checkbox" id="newsletter-2" name="newsletter" value="no" checked> <label for="newsletter-2">Not today!</label>
+        <br>
+
+        A <input type="radio" name="quiz_question_1" value="a" checked><br>
+        B <input type="radio" name="quiz_question_1" value="b"><br>
+        C <input type="radio" name="quiz_question_1" value="c"><br>
+        D <input type="radio" name="quiz_question_1" value="d"><br>
+
+        <br>
+        <label for="coffee">Coffee Preference</label>
+        <select id="coffee" name="coffee_preference">
+            <option value="light">Light Roast</option>
+            <option value="dark">Dark Roast</option>
+            <option value="espresso" selected>Espresso Blend</option>
+        </select>
+        <br>
+        <input type="hidden" name="favorite-class" value="a-mystery">
+        <button type="submit">Submit the form</button>
+    </form>
+</body>
+</html>
