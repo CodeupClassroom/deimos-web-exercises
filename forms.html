@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register with Us!</title>
+</head>
+<body>
+    <form method="POST" action="https://request-inspector.glitch.me/">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="text" placeholder="Email">
+        <br>
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password" placeholder="Password">
+        <br>
+        <label for="bio">Tell me about yourself!</label>
+        <br>
+        <textarea name="bio" id="bio" cols="30" rows="10"></textarea>
+        <br>
+        <h3>How did you hear about us?</h3>
+
+        <input id="internet" name="advertisement" value="internet" type="checkbox"><label for="internet">Internet Advertisement</label>
+
+        <input id="radio" name="advertisement" value="radio" type="checkbox"><label for="radio">Radio Advertisement</label>
+
+        <input id="billboard" name="advertisement" value="billboard" type="checkbox"><label for="billboard">Billboard Advertisement</label>
+
+        <input id="other" name="advertisement" value="other" type="checkbox"><label for="other">Other</label>
+
+        <br>
+        <label for="browser">What browser are you using?</label>
+        <select name="internet-browser" id="browser">
+            <option value="safari">Safari</option>
+            <option value="chrome">Chrome</option>
+            <option value="firefox">Firefox</option>
+            <option value="edge">Edge</option>
+            <option value="vivaldi">Vivaldi</option>
+            <option value="opera">Opera</option>
+            <option value="netscape">Netscape Navigator</option>
+        </select>
+
+        <br>
+        <input type="submit">
+    </form>
+</body>
+</html>
