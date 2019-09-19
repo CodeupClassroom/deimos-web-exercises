@@ -14,6 +14,20 @@
 
         console.log(sum(2,2));
         console.log(sum(3,4));
+
+        //write function to find the area of a triangle
+        //this function takes in 3 parameters
+        function triangleArea(a,b,c){
+            //this variable stores half the perimeter
+            var half = (a+b+c)/2;
+            //the area is the squareroot of this
+            var area = Math.sqrt(half * (half-a) * (half-b) * (half-c));
+            //function returns the area
+            return area;
+        }
+
+        //console log to see the result
+        console.log(triangleArea(5, 6, 7));
     </script>
 </body>
 </html>
