@@ -21,6 +21,18 @@ li {
     font-family: 'Ubuntu', sans-serif;
 }
 
+.col {
+    height: 400px;
+    background-color: rgba(50,50,50,0.9);
+}
+
+.collapsible {
+    color: #000;
+}
+
+.collapsible-body {
+    color: #fff;
+}
 .cta-row {
     /*background-color: black;*/
     background-image: url(../img/black-and-white-bracelet-cooperation-814544.jpg);
@@ -66,16 +78,4 @@ li {
     color: #fff;
     background-color: rgba(0,0,0,0.9);
     padding: 3%;
-}
-.col {
-    height: 400px;
-    background-color: rgba(50,50,50,0.9);
-}
-
-.collapsible {
-    color: #000;
-}
-
-.collapsible-body {
-    color: #fff;
 }
