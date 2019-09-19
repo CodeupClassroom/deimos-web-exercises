@@ -14,13 +14,13 @@ div.row{
     width: 100%;
 
 }
-#cta{
-    margin-top: 5%;
+
+.container {
+    width: 95%;
 }
 .right {
     margin-right: 3%;
 }
-
 .brand-logo {
     margin-left: 3%;
     font-weight: bold;
@@ -40,8 +40,15 @@ div.row{
     background-color: rgba(0,0,0,0.9);
     padding: 3%;
 }
-
-#cta a {
+.cta{
+    margin-top: 5%;
+    padding: 5%;
+}
+.cta a {
     margin-top: 2%;
     background-color: black;
+}
+
+.cta h3 {
+    text-align: left;
 }
