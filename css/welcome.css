@@ -14,6 +14,9 @@ div.row{
     width: 100%;
 
 }
+#cta{
+    margin-top: 5%;
+}
 .right {
     margin-right: 3%;
 }
@@ -34,6 +37,11 @@ div.row{
     font-family: 'Syncopate', sans-serif;
     font-weight: 900;
     color: #fff;
-    background-color: #000;
+    background-color: rgba(0,0,0,0.9);
     padding: 3%;
+}
+
+#cta a {
+    margin-top: 2%;
+    background-color: black;
 }
