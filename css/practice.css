@@ -1,0 +1,13 @@
+/*turns all h1 red*/
+h1 {
+     color: blue;
+ }
+
+#ipsums{
+    background-image: url('../img/domestic-dog_thumb.jpg');
+    color: green;
+}
+
+#ipsums h1{
+    color:inherit;
+}
