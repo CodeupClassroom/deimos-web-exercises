@@ -1,5 +1,6 @@
 nav {
     background-color: #fff;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 nav ul a {
@@ -8,4 +9,31 @@ nav ul a {
 
 nav .brand-logo {
     color: #000;
+}
+div.row{
+    width: 100%;
+
+}
+.right {
+    margin-right: 3%;
+}
+
+.brand-logo {
+    margin-left: 3%;
+    font-weight: bold;
+    font-family: 'Syncopate', sans-serif;
+}
+
+#banner {
+    height: 500px;
+    background-image: url(../img/architectural-design-architecture-building-2096578.jpg);
+    background-size: cover;
+}
+#banner h1{
+    width: 100%;
+    font-family: 'Syncopate', sans-serif;
+    font-weight: 900;
+    color: #fff;
+    background-color: #000;
+    padding: 3%;
 }
