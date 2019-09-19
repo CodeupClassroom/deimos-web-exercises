@@ -7,16 +7,23 @@ nav ul a {
     color: #000;
 }
 
+nav ul a:hover {
+    background-color: #ffecb3;
+}
 nav .brand-logo {
     color: #000;
 }
 div.row{
     width: 100%;
-
 }
 
-.container {
-    width: 95%;
+li {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.cta-row {
+    /*background-color: black;*/
+    background-image: url(../img/black-and-white-bracelet-cooperation-814544.jpg);
 }
 .right {
     margin-right: 3%;
@@ -25,6 +32,26 @@ div.row{
     margin-left: 3%;
     font-weight: bold;
     font-family: 'Syncopate', sans-serif;
+}
+
+.cta{
+    margin-top: 5%;
+    padding: 5%;
+    color: #fff;
+}
+.cta a {
+    margin-top: 3%;
+    background-color: white;
+    color: black;
+    text-align: left;
+}
+
+.cta a:hover {
+    background-color: #ffecb3;
+}
+
+.cta h3 {
+    text-align: left;
 }
 
 #banner {
@@ -40,15 +67,15 @@ div.row{
     background-color: rgba(0,0,0,0.9);
     padding: 3%;
 }
-.cta{
-    margin-top: 5%;
-    padding: 5%;
-}
-.cta a {
-    margin-top: 2%;
-    background-color: black;
+.col {
+    height: 400px;
+    background-color: rgba(50,50,50,0.9);
 }
 
-.cta h3 {
-    text-align: left;
+.collapsible {
+    color: #000;
+}
+
+.collapsible-body {
+    color: #fff;
 }
