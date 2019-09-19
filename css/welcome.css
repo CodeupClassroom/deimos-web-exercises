@@ -1,0 +1,81 @@
+nav {
+    background-color: #fff;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+nav ul a {
+    color: #000;
+}
+
+nav ul a:hover {
+    background-color: #ffecb3;
+}
+nav .brand-logo {
+    color: #000;
+}
+div.row{
+    width: 100%;
+}
+
+li {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.col {
+    height: 400px;
+    background-color: rgba(50,50,50,0.9);
+}
+
+.collapsible {
+    color: #000;
+}
+
+.collapsible-body {
+    color: #fff;
+}
+.cta-row {
+    /*background-color: black;*/
+    background-image: url(../img/black-and-white-bracelet-cooperation-814544.jpg);
+}
+.right {
+    margin-right: 3%;
+}
+.brand-logo {
+    margin-left: 3%;
+    font-weight: bold;
+    font-family: 'Syncopate', sans-serif;
+}
+
+.cta{
+    margin-top: 5%;
+    padding: 5%;
+    color: #fff;
+}
+.cta a {
+    margin-top: 3%;
+    background-color: white;
+    color: black;
+    text-align: left;
+}
+
+.cta a:hover {
+    background-color: #ffecb3;
+}
+
+.cta h3 {
+    text-align: left;
+}
+
+#banner {
+    height: 500px;
+    background-image: url(../img/architectural-design-architecture-building-2096578.jpg);
+    background-size: cover;
+}
+#banner h1{
+    width: 100%;
+    font-family: 'Syncopate', sans-serif;
+    font-weight: 900;
+    color: #fff;
+    background-color: rgba(0,0,0,0.9);
+    padding: 3%;
+}
