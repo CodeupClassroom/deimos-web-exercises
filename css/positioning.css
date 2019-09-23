@@ -1,0 +1,55 @@
+* {
+    box-sizing: border-box;
+}
+body{
+    background: whitesmoke;
+    color: #242424;
+    margin: 0;
+}
+
+header {
+    width: 100vw;
+    height: 60vh;
+    background-image: url(../img/landscape.gif);
+    background-size: cover;
+    margin: 0;
+}
+
+#navbar {
+    width: 100vw;
+    margin: 0;
+    position: sticky;
+    top: -50px;
+    background: cornflowerblue;
+    padding: 10px;
+    text-align: center;
+}
+
+.box {
+    padding: 10px;
+    border: 5px solid cornflowerblue;
+    border-radius: 10px;
+}
+
+#box-1 {
+    /*float: left;*/
+    width: 350px;
+    height: 350px;
+    background: palevioletred;
+}
+#box-2 {
+    /*float: right;*/
+    width: 450px;
+    height: 250px;
+    background: palegreen;
+}
+
+p {
+    /*clear: both;*/
+}
+
+.bonzi {
+    position: fixed;
+    right: 0;
+    top: 0;
+}
