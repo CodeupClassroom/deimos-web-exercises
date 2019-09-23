@@ -1,13 +1,33 @@
-/*turns all h1 red*/
-h1 {
-     color: blue;
- }
-
-#ipsums{
-    background-image: url('../img/domestic-dog_thumb.jpg');
-    color: green;
+body {
+    margin: 0;
+}
+.box {
+    /*default box-sizing is content-box*/
+    /*box-sizing: border-box;*/
+    width: 150px;
+    height: 150px;
+    padding: 25px;
+    border: 1px solid black;
+    background-color: pink;
+    margin: 5px;
 }
 
-#ipsums h1{
-    color:inherit;
+#box2 {
+    box-sizing: border-box;
+}
+
+#red:hover {
+    color: red;
+}
+#orange:hover {
+    color: orange;
+}
+#yellow:hover {
+    color: yellow;
+}
+#green:hover {
+    color: green;
+}
+#blue:hover {
+    color: blue;
 }
