@@ -16,8 +16,8 @@ body {
     margin: 10px auto;
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
-    justify-content: space-evenly;
+    align-items: center;
+    justify-content: center;
     flex-wrap: wrap;
     align-content: center;
 }
@@ -36,7 +36,8 @@ body {
 }
 
 #lucky {
-    flex-grow: 70;
+    /*flex-grow: 70;*/
+    /*margin-left: auto;*/
 }
 
 #unlucky {

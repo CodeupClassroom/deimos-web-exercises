@@ -90,8 +90,6 @@ main {
     margin: 0 auto;
     padding: 1em;
     background: darkorange;
-}
-main {
     min-height: 100vh;
     /*
         the following declarations control the layout for all the cards,
@@ -117,10 +115,10 @@ footer {
 }
 h1 {
     font-size: 2em;
-    text-align: left;
 }
 footer h1 {
     margin: 0;
+    text-align: left;
     font-weight: bolder;
 }
 h5 {
