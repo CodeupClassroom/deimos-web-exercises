@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>navbar</title>
+    <link href="https://fonts.googleapis.com/css?family=Anonymous+Pro|Fugaz+One&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Anonymous Pro', monospace;
+            margin: 0;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-content: center;
+            height: 5em;
+            background-color: #0fb784;
+            color: whitesmoke;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            padding: 3px 10vw;
+            border-bottom: #373fff 3px solid;
+            box-shadow: 1px 0 12px #373fff;
+        }
+        ul {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+        }
+        li {
+            display: inline-block;
+            margin: 1em;
+            text-shadow: 1px 1px #373fff;
+        }
+        nav a {
+            text-decoration: none;
+            color: whitesmoke;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        nav a:hover{
+            color: #373fff;
+        }
+        nav a:active{
+            color: orangered;
+        }
+        h2>a {
+            font-size: 2.2em;
+            position: absolute;
+            /*With The Calc Function Calc*/
+            top: calc(50% - 38px);
+            left: calc(50% - calc(117px / 2));
+
+            /* With Transform */
+            /*top: 50%;*/
+            /*left: 50%;*/
+            /*transform: translate(-50%, -50%);*/
+
+            font-family: 'Fugaz One', cursive;
+            text-shadow: 3px 3px #373fff;
+        }
+        h2>a:hover {
+            text-shadow: 3px 3px whitesmoke;
+        }
+        li>a:hover {
+            text-shadow: 1px 1px whitesmoke;
+        }
+        body{
+            background: #0fb784;
+            color: #0a1428;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Articles</a></li>
+            <li><a href="#">Résumé</a></li>
+        </ul>
+        <h2>
+            <a href="#">Logo</a>
+        </h2>
+        <ul id="social">
+            <li><a href="#" target="_blank">Twitter</a></li>
+            <li><a href="https://www.linkedin.com/in/david-a-stephens/" target="_blank">LinkedIn</a></li>
+            <li><a href="#" target="_blank">Facebook</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
