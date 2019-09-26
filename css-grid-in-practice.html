@@ -2,22 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Jim's Electronics and More! | Garage Sale</title>
     <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic|Shrikhand&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --sweet-red: #e53f39;
+            --powder-blue: #ddf3ff;
+            --lol: #696969;
+            --darker-grey: #3A3A3A;
+            --dusk-grey: #494949;
+            --darkerer-grey: #292929;
+        }
         * {
             box-sizing: border-box;
         }
         body {
             margin: 0;
             font-family: 'Nanum Gothic', sans-serif;
-            background: #ddf3ff;
+            background: var(--powder-blue);
         }
 
         h1, h2, h3, h4, h5 {
             font-family: 'Shrikhand', cursive;
-            color: #e53f39;
-            text-shadow: 2px 2px #494949;
+            color: var(--sweet-red);
+            text-shadow: 2px 2px var(--dusk-grey);
+            text-align: center;
         }
         .parent {
             display: grid;
@@ -29,14 +38,14 @@
         }
         .div1 {
             grid-area: 1 / 1 / 1 / 6;
-            background: #292929;
-            color: #ddf3ff;
+            background: var(--darkerer-grey);
+            color: var(--powder-blue);
             position: relative;
         }
         .div2 {
             grid-area: 2 / 1 / 21 / 2;
-            background-color: #3A3A3A;
-            color: #ddf3ff;
+            background-color: var(--darker-grey);
+            color: var(--powder-blue);
         }
         nav ul {
             display: flex;
@@ -48,19 +57,22 @@
         nav li {
             display: inline-block;
             padding: 1em;
+            transition: .5s;
         }
         nav li:hover {
-            background-color: #696969;
+            background-color: var(--lol);
             padding-bottom: calc(1em - 5px);
-            border-bottom: solid 5px #ddf3ff;
+            border-bottom: solid 5px var(--powder-blue);
         }
         nav li:nth-of-type(5) {
             margin-left: auto;
         }
         #store-name {
+            font-size: 2.5em;
             position: absolute;
-            top: -.5em;
-            left: calc(50% - 177px);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -100%);
         }
         .div2 ul {
             display: flex;
@@ -72,18 +84,24 @@
         .div2 li {
             display: inline-block;
             padding: 1em;
+            transition: .5s;
+        }
+        .div2 li:nth-of-type(7) {
+            background-color: var(--sweet-red);
+            box-shadow: -.2em .2em var(--darkerer-grey);
         }
         .div2 li:hover {
-            background: #696969;
+            background: var(--lol);
+            box-shadow: 0 0 transparent;
         }
         .div3 {
             grid-area: 2 / 2 / 21 / 6;
-            margin: 5px;
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             grid-template-rows: repeat(3, 1fr);
-            grid-column-gap: 5px;
-            grid-row-gap: 5px;
+            grid-column-gap: 0;
+            grid-row-gap: 0;
+            overflow: auto;
         }
         .item1 { grid-area: 1 / 1 / 2 / 2; }
         .item2 { grid-area: 1 / 2 / 2 / 3; }
@@ -99,16 +117,59 @@
         .item12 { grid-area: 3 / 4 / 4 / 5; }
         .card {
             display: grid;
-            grid-template-columns: 1fr;
+            /*grid-template-columns: 1fr;*/
             grid-template-rows: 1fr 4fr repeat(2, 1fr);
-            grid-column-gap: 5px;
-            grid-row-gap: 5px;
-            background-color: #696969;
+            grid-column-gap: 0;
+            grid-row-gap: 0;
+            margin: 5px;
+            /*background-color: var(--lol);*/
+            /*box-shadow: 5px 5px var(--dusk-grey);*/
         }
-        .item-name { grid-area: 1 / 1 / 2 / 2; }
-        .item-pic { grid-area: 2 / 1 / 3 / 2; }
-        .item-price { grid-area: 3 / 1 / 4 / 2; }
-        .add-to-cart { grid-area: 4 / 1 / 5 / 2; }
+        .item-name {
+            grid-area: 1 / 1 / 2 / 2;
+        }
+        .item-name>h2 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: center;
+        }
+        .item-pic {
+            grid-area: 2 / 1 / 3 / 2;
+            background-color: var(--dusk-grey);
+            border-radius: 10%;
+            margin: 10px;
+            border: 12px solid var(--darker-grey);
+            transition: .5s;
+        }
+        .item-pic:hover {
+            background-color: var(--lol);
+            border: 12px solid var(--sweet-red)
+        }
+        .item-pic>img {
+            object-fit: scale-down;
+            width: calc(100% - 20px);
+            height: calc(100% - 20px);
+            margin: 10px;
+        }
+        .item-price {
+            grid-area: 3 / 1 / 4 / 2;
+        }
+        .add-to-cart {
+            grid-area: 4 / 1 / 5 / 2;
+        }
+        .btn {
+            font-family: 'Shrikhand', cursive;
+            font-size: 19px;
+            width: calc(100% - 2em);
+            padding: .5em;
+            margin: 0 1em;
+            border: solid 2px var(--lol);
+            border-radius: 10px;
+            color: var(--powder-blue);
+            background: var(--sweet-red);
+            box-shadow: 5px 5px var(--darker-grey);
+        }
     </style>
 </head>
 <body>
@@ -120,7 +181,7 @@
                 <li>Consumer Information</li>
                 <li>Search</li>
                 <li>Contact Us</li>
-                <li>Sleep</li>
+                <li>Cart</li>
             </ul>
             <h2 id="store-name">Jim's Electronics and More!</h2>
         </nav>
@@ -132,80 +193,226 @@
                 <li>Music and Movies</li>
                 <li>Gizmos and Gadgets</li>
                 <li>Wires, Capacitors, and More</li>
+                <li>Garage Sale and Clearance</li>
             </ul>
         </div>
         <div class="div3">
             <div class="item1 card">
-                <div class="item-name"> </div>
-                <div class="item-pic"> </div>
-                <div class="item-price"> </div>
-                <div class="add-to-cart"> </div>
+                <div class="item-name">
+                    <h2>
+                        Video Cassette Recorder
+                    </h2>
+                </div>
+                <div class="item-pic">
+                    <img src="img/vcr.webp" alt="VCR">
+                </div>
+                <div class="item-price">
+                    <h2>
+                        $39.99
+                    </h2>
+                </div>
+                <div class="add-to-cart">
+                    <button class="btn">Add to cart</button>
+                </div>
             </div>
             <div class="item2 card">
-                <div class="item-name"> </div>
-                <div class="item-pic"> </div>
-                <div class="item-price"> </div>
-                <div class="add-to-cart"> </div>
+                <div class="item-name">
+                    <h2>
+                        Big Dumb Hammer
+                    </h2>
+                </div>
+                <div class="item-pic">
+                    <img src="img/hammer.png" alt="Hammer">
+                </div>
+                <div class="item-price">
+                    <h2>
+                        $7.99
+                    </h2>
+                </div>
+                <div class="add-to-cart">
+                    <button class="btn">Add to cart</button>
+                </div>
             </div>
             <div class="item3 card">
-                <div class="item-name"> </div>
-                <div class="item-pic"> </div>
-                <div class="item-price"> </div>
-                <div class="add-to-cart"> </div>
+                <div class="item-name">
+                    <h2>
+                        The Transformers
+                    </h2>
+                </div>
+                <div class="item-pic">
+                    <img src="img/tf-ld.jpg" alt="Transformers on LaserDisc">
+                </div>
+                <div class="item-price">
+                    <h2>
+                        $24.99
+                    </h2>
+                </div>
+                <div class="add-to-cart">
+                    <button class="btn">Add to cart</button>
+                </div>
             </div>
             <div class="item4 card">
-                <div class="item-name"> </div>
-                <div class="item-pic"> </div>
-                <div class="item-price"> </div>
-                <div class="add-to-cart"> </div>
+                <div class="item-name">
+                    <h2>
+                        IBM Thinkpad
+                    </h2>
+                </div>
+                <div class="item-pic">
+                    <img src="img/thinkpad.webp" alt="IBM Thinkpad">
+                </div>
+                <div class="item-price">
+                    <h2>
+                        $599.99
+                    </h2>
+                </div>
+                <div class="add-to-cart">
+                    <button class="btn">Add to cart</button>
+                </div>
             </div>
             <div class="item5 card">
-                <div class="item-name"> </div>
-                <div class="item-pic"> </div>
-                <div class="item-price"> </div>
-                <div class="add-to-cart"> </div>
+                <div class="item-name">
+                    <h2>
+                        Sword of Omens
+                    </h2>
+                </div>
+                <div class="item-pic">
+                    <img src="img/sword-of-omens.png" alt="Sword of Omens">
+                </div>
+                <div class="item-price">
+                    <h2>
+                        $224.99
+                    </h2>
+                </div>
+                <div class="add-to-cart">
+                    <button class="btn">Add to cart</button>
+                </div>
             </div>
             <div class="item6 card">
-                <div class="item-name"> </div>
-                <div class="item-pic"> </div>
-                <div class="item-price"> </div>
-                <div class="add-to-cart"> </div>
+                <div class="item-name">
+                    <h2>
+                        Casio Calculator
+                    </h2>
+                </div>
+                <div class="item-pic">
+                    <img src="img/calculator.png" alt="Casio Calculator">
+                </div>
+                <div class="item-price">
+                    <h2>
+                        $11.99
+                    </h2>
+                </div>
+                <div class="add-to-cart">
+                    <button class="btn">Add to cart</button>
+                </div>
             </div>
             <div class="item7 card">
-                <div class="item-name"> </div>
-                <div class="item-pic"> </div>
-                <div class="item-price"> </div>
-                <div class="add-to-cart"> </div>
+                <div class="item-name">
+                    <h2>
+                        IBM Model M Keyboard
+                    </h2>
+                </div>
+                <div class="item-pic">
+                    <img src="img/model-m.png" alt="IBM Model M Keyboard">
+                </div>
+                <div class="item-price">
+                    <h2>
+                        $34.99
+                    </h2>
+                </div>
+                <div class="add-to-cart">
+                    <button class="btn">Add to cart</button>
+                </div>
             </div>
             <div class="item8 card">
-                <div class="item-name"> </div>
-                <div class="item-pic"> </div>
-                <div class="item-price"> </div>
-                <div class="add-to-cart"> </div>
+                <div class="item-name">
+                    <h2>
+                        Underwood Typewriter
+                    </h2>
+                </div>
+                <div class="item-pic">
+                    <img src="img/typewriter.png" alt="Underwood Typewriter">
+                </div>
+                <div class="item-price">
+                    <h2>
+                        $449.99
+                    </h2>
+                </div>
+                <div class="add-to-cart">
+                    <button class="btn">Add to cart</button>
+                </div>
             </div>
             <div class="item9 card">
-                <div class="item-name"> </div>
-                <div class="item-pic"> </div>
-                <div class="item-price"> </div>
-                <div class="add-to-cart"> </div>
+                <div class="item-name">
+                    <h2>
+                        Capacitor
+                    </h2>
+                </div>
+                <div class="item-pic">
+                    <img src="img/capacitor.png" alt="Capacitor">
+                </div>
+                <div class="item-price">
+                    <h2>
+                        $0.99
+                    </h2>
+                </div>
+                <div class="add-to-cart">
+                    <button class="btn">Add to cart</button>
+                </div>
             </div>
+
             <div class="item10 card">
-                <div class="item-name"> </div>
-                <div class="item-pic"> </div>
-                <div class="item-price"> </div>
-                <div class="add-to-cart"> </div>
+                <div class="item-name">
+                    <h2>
+                        Nokia 3310
+                    </h2>
+                </div>
+                <div class="item-pic">
+                    <img src="img/nokia-3310.png" alt="Nokia 3310 (2017)">
+                </div>
+                <div class="item-price">
+                    <h2>
+                        $199.99
+                    </h2>
+                </div>
+                <div class="add-to-cart">
+                    <button class="btn">Add to cart</button>
+                </div>
             </div>
             <div class="item11 card">
-                <div class="item-name"> </div>
-                <div class="item-pic"> </div>
-                <div class="item-price"> </div>
-                <div class="add-to-cart"> </div>
+                <div class="item-name">
+                    <h2>
+                        Miniature Refrigerator
+                    </h2>
+                </div>
+                <div class="item-pic">
+                    <img src="img/mini-fridge.png" alt="Mini-Fridge">
+                </div>
+                <div class="item-price">
+                    <h2>
+                        $149.99
+                    </h2>
+                </div>
+                <div class="add-to-cart">
+                    <button class="btn">Add to cart</button>
+                </div>
             </div>
             <div class="item12 card">
-                <div class="item-name"> </div>
-                <div class="item-pic"> </div>
-                <div class="item-price"> </div>
-                <div class="add-to-cart"> </div>
+                <div class="item-name">
+                    <h2>
+                        Sony Bluetooth Speaker
+                    </h2>
+                </div>
+                <div class="item-pic">
+                    <img src="img/SRSXB22.png" alt="Sony Bluetooth Speaker">
+                </div>
+                <div class="item-price">
+                    <h2>
+                        $79.99
+                    </h2>
+                </div>
+                <div class="add-to-cart">
+                    <button class="btn">Add to cart</button>
+                </div>
             </div>
         </div>
     </main>
