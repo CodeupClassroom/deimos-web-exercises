@@ -1,3 +1,4 @@
+/*DEFAULT SCREEN SIZE - Mobile Devices*/
 body {
     margin: 0;
 }
@@ -12,22 +13,40 @@ body {
     margin: 5px;
 }
 
-#box2 {
-    box-sizing: border-box;
+/*sideways iPhone*/
+@media screen and (min-width: 768px){
+    body {
+        background-color: black;
+    }
 }
 
-#red:hover {
-    color: red;
+/*desktop*/
+@media screen and (min-width: 992px){
+    .box {
+        background-color: green;
+    }
 }
-#orange:hover {
-    color: orange;
+
+/*XL screens*/
+@media screen and (min-width: 1200px){
+    .box {
+        background-color: purple;
+    }
 }
-#yellow:hover {
-    color: yellow;
-}
-#green:hover {
-    color: green;
-}
-#blue:hover {
-    color: blue;
-}
+
+/*!*For smaller desktops, iPad Pro*!*/
+/*@media screen and (max-width: 1024px){*/
+    /*.box {*/
+        /*background-color: yellow;*/
+    /*}*/
+/*}*/
+
+/*!*For mobile devices*!*/
+/*@media screen and (max-width: 768px){*/
+    /*body {*/
+        /*background-color: black;*/
+    /*}*/
+    /*.box {*/
+        /*background-color: blue;*/
+    /*}*/
+/*}*/
