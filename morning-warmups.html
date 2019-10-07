@@ -8,6 +8,17 @@
     <h1>Morning Warmups!</h1>
     <script>
 
+        // Write a JavaScript function returns true only when passed a positive, even number.
+
+        function isEvenPositiveNum(num) {
+            return num % 2 === 0 && num > 0;
+        }
+
+        console.log(isEvenPositiveNum(2));
+        console.log(isEvenPositiveNum(5));
+        console.log(isEvenPositiveNum(-8));
+        console.log(isEvenPositiveNum(0));
+
         function checkType(x){
             return typeof(x);
         }
