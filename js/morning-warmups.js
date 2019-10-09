@@ -8,6 +8,7 @@ function helloThere(string = "stranger") {
 var promptedResponse = prompt('Input string, plox.');
 alert(helloThere(promptedResponse));
 
+//end of wednesday 10/9 warmup.
 
 //write a function that prompts a user for an input and returns true if the
 // number is greater than 5
