@@ -108,3 +108,19 @@ function triangleArea(a,b,c){
 }
 //console log to see the result
 console.log(triangleArea(5, 6, 7));
+
+//write a function that accepts an array and returns the length of that array
+
+function arrayLength(array){
+    return array.length
+}
+
+console.log(arrayLength([1, 2, 3, 4, 5]));
+
+
+
+
+
+
+
+
