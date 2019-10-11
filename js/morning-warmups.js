@@ -1,5 +1,20 @@
 // "use strict";
 
+// Write a JavaScript function that returns the quotient of two numbers, but only when passed two numbers. It should return false in all other cases.
+
+function quotient(n, m) {
+    if (typeof n === 'number' && typeof m === 'number') {
+        return n / m;
+    } else {
+        return false;
+    }
+}
+
+console.log(quotient(21,7), 3);
+console.log(quotient(21,"7"), false);
+console.log(quotient("21",7), false);
+
+
 // Write a JavaScript function returns the message, “Hello there, stranger.” Alert the return from this function. Refactor so that it returns “Hello there, “ concatenated to an argument. Prompt the user to input a string, call the function, and alert the return. Refactor so that the function has ‘stranger’ as a default value for the parameter.
 
 function helloThere(string = "stranger") {
