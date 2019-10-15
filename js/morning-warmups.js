@@ -20,8 +20,8 @@ console.log(quotient("21",7), false);
 function helloThere(string = "stranger") {
     return 'Hello there, ' + string + '.';
 }
-var promptedResponse = prompt('Input string, plox.');
-alert(helloThere(promptedResponse));
+// var promptedResponse = prompt('Input string, plox.');
+// alert(helloThere(promptedResponse));
 
 //end of wednesday 10/9 warmup.
 
@@ -130,10 +130,24 @@ function arrayLength(array){
     return array.length
 }
 
-console.log(arrayLength([1, 2, 3, 4, 5]));
+// console.log(arrayLength([1, 2, 3, 4, 5]));
 
 
 
+//write a function that accepts an array that has a length of 5. Console log each element of that array
+
+function logArray(arrayInput){
+    // console.log(arrayInput);
+    console.log(arrayInput[0]);
+    console.log(arrayInput[1]);
+    console.log(arrayInput[2]);
+    console.log(arrayInput[3]);
+    console.log(arrayInput[4]);
+
+
+}
+
+logArray([1, 2, 3, 4, 5])
 
 
 
