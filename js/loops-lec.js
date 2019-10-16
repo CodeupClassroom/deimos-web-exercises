@@ -88,6 +88,9 @@ var myArray = ["apples", "oranges", "bananas", "grapes", "pineapples"];
 // 7. Create a for loop that iterates over this array and logs out each
 // element to the console
 
+for(var z = 0;z < myArray.length;z++){
+    console.log(myArray[z]);
+}
 
 // 8. You are going to use a for loop to complete the FizzBuzz exercise.
 // Your program should count up to 100.
@@ -96,8 +99,26 @@ var myArray = ["apples", "oranges", "bananas", "grapes", "pineapples"];
 // If divisible by 3 and 5, log "FizzBuzz"
 // All other cases, just log the number.
 
+// Version 1
+for(var s = 1;s < 101;s++){
+    if(s %  15 === 0) console.log("FizzBuzz");
+    else if(s % 5 === 0) console.log("Buzz");
+    else if(s % 3 === 0) console.log("Fizz");
+    else console.log(s);
+}
+
+//Version 2 one line
+for(var s = 0; s < 100;)console.log((++s%3 ? '':'fizz') + (s%5 ? '':'buzz') || s);
+
 // 9. Refactor question 1 using a for-loop
 
+for(var b = 100; b > 1; b--){
+    if(b === 10){
+        console.log("this is: " + b);
+        continue;
+    }
+    console.log(b);
+}
 
 
 /*
