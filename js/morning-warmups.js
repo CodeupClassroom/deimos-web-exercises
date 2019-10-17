@@ -1,5 +1,13 @@
 // "use strict";
 
+// Write a JavaScript function that takes in an input and returns true if the input is a string, at least 8 characters in length. It should return false for all other input.
+
+function stringWithAtleastEightChar(str) {
+    return typeof str === 'string' && str.length >= 8;
+}
+
+console.log(stringWithAtleastEightChar(88888888));
+
 // Write a JavaScript function that returns the quotient of two numbers, but only when passed two numbers. It should return false in all other cases.
 
 function quotient(n, m) {
