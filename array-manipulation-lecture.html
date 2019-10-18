@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array Manipulation Lecture</title>
+    <link href="https://fonts.googleapis.com/css?family=Lekton" rel="stylesheet">
+    <style>
+        body {
+            background-color: darkslateblue;
+            color: white;
+            font-family: 'Lekton', sans-serif;
+        }
+
+        .grandpa {
+            background-color: #1B1B1B;
+            height: 8.85em;
+            width: 65em;
+            box-shadow: 4px 4px 9px black;
+        }
+
+        .dad {
+            background-color: #343434;
+            display: inline-block;
+            height: 7.25em;
+        }
+
+        .son {
+            background-color: dimgrey;
+            display: inline-block;
+            height: 7.25em;
+            position: relative;
+            top: .75em;
+            left: .75em;
+        }
+
+        h1 {
+            position: relative;
+            display: inline-block;
+            background-color: #989898;
+            margin: 0;
+            font-size: 6em;
+            top: .125em;
+            left: .125em;
+            padding: 1px 10px;
+            color: darkslateblue;
+        }
+
+        .circle {
+            border-radius: 50%;
+            box-shadow: 4px 4px 9px black;
+        }
+
+        .grandma {
+            height: 400px;
+            width: 400px;
+            background: url("img/mars.webp");
+            background-size: cover;
+            position: absolute;
+            bottom: 12px;
+            right: 20px;
+        }
+
+        .daughter {
+            height: 120px;
+            width: 120px;
+            background: dimgrey;
+            position: absolute;
+            bottom: 90px;
+            right: 420px;
+        }
+
+        .grand-daughter {
+            height: 70px;
+            width: 70px;
+            background: #989898;
+            position: absolute;
+            bottom:-80px;
+            right: -50px;
+        }
+
+        .push {
+            position: relative;
+            top: 30px;
+        }
+    </style>
+</head>
+<body>
+<div class="grandpa">
+    <div class="dad">
+        <div class="son">
+            <h1>Arrays in JavaScript</h1>
+        </div>
+    </div>
+
+    <p class="push">Don't get distracted by the dots.</p>
+
+    <div class="circle grandma">
+        <div class="circle mom">
+            <div class="circle daughter">
+                <div class="circle grand-daughter"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/array-manipulation-lec.js"></script>
+</body>
+</html>
