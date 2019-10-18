@@ -1,5 +1,15 @@
 // "use strict";
 
+// Write a JavaScript function that takes in floating point number, and returns the number rounded down. It should return false for all inputs that aren’t numbers.
+
+function roundDownFloat(num) {
+    if (typeof num === 'number' && !isNaN(num)) {
+        return Math.floor(num);
+    }
+}
+
+console.log(roundDownFloat(3.14));
+
 // Write a JavaScript function that returns the quotient of two numbers, but only when passed two numbers. It should return false in all other cases.
 
 function quotient(n, m) {
