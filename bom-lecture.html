@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The B.O.M.</title>
+</head>
+<body>
+    <h1>B.O.M.</h1>
+    <ul>
+        <li>Browser</li>
+        <li>Object</li>
+        <li>Model</li>
+    </ul>
+
+    <p>Today, we'll be talking about the <i>window</i> object in JavaScript <br>
+    We've actually interacted with the window object before. Just not explicitly.
+    </p>
+
+    <button onclick="window.alert('You\'ve seen me before, but did you know I\'m a part of the window object?')">Click for alert</button>
+    <button onclick="window.confirm('Confirms are also a part of the window object.')">Click for confirm</button>
+    <button onclick="window.prompt('Prompts too!')">Click for prompt</button>
+
+    <p>In interaction with the window object, we can also set code to execute on a delay.</p>
+
+    <script>
+        // delayed code.
+        function seconds(int) {
+            return int * 1000;
+        }
+
+        setTimeout(function() {
+            console.log("So after 5 seconds you should be able to see this message!");
+            // We'll talk about this tomorrow. :)
+            document.getElementsByTagName('body')[0].innerHTML += ("<p>We can also write code that repeats</p>");
+            // Repeating code
+            setInterval(function() {
+                console.log('Now I can log a little how do you do to the console every 5 seconds!')
+            }, seconds(5));
+        }, 5000);
+
+        function logHello() {
+            console.log("Hello");
+        }
+
+        setInterval(logHello, seconds(2));
+    </script>
+
+    <p>We also can change the location of our window.</p>
+
+    <script>
+        // window.location = 'https://www.youtube.com/watch?v=yPYZpwSpKmA';
+
+        var isAdmin = confirm("Are you an admin?");
+
+        if (!isAdmin) {
+            window.location = 'https://www.youtube.com/watch?v=ffMnKoHPUKw'
+        }
+    </script>
+
+    <p>We can also reload the page.</p>
+    <button onclick="location.reload()">Refresh the page.</button>
+
+</body>
+</html>
