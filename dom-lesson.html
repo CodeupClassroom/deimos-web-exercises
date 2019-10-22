@@ -1,0 +1,65 @@
+<html>
+<head>
+    <title>2019.10.22</title>
+    <style>
+        .highlight {
+            background-color: limegreen;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Pleased to meet you, <span id="deimos">Deimos</span>!</h1>
+    <h3 id="date">2019.10.22</h3>
+
+    <h2>Thought for the day:</h2>
+    <ul>
+        <li class="banana"> Curiosity <span id="skillz" class="banana">SKILLED</span> the Cat</li>
+    </ul>
+
+    <h2>Today:</h2>
+    <ul id="today">
+        <li class="subject" data-subject="dom"> Document Object Model</li>
+        <li class="subject" data-subject="dom-events"> DOM Events</li>
+    </ul>
+
+    <h2>Reminders and Announcements:</h2>
+    <ul>
+        <li>Class out @4p</li>
+        <li> TechTalk: Chris Lowe from USAA</li>
+        <li class="banana"> SASW & Geekdom Birthday</li>
+    </ul>
+    <div>
+        <label for="message">Message</label>
+        <input id="message" name="message" type="text" />
+        <button onclick="updateMessage()">Update</button>
+        <h2 id="output"></h2>
+    </div>
+
+<script>
+    "use strict";
+    var updateMessage = function() {
+        var newMessage = document.getElementById("message").value;
+        var oldMessage = document.getElementById("output").append( " " +newMessage);
+        // document.getElementById("output").innerHTML = "<br>" + oldMessage + newMessage;
+
+    }
+</script>
+    <h2>Suggestions:</h2>
+    <ul>
+        <li>Always style using classes</li>
+        <li>Usually add action using id</li>
+        <li>Include javascript at close of body tag</li>
+        <li>Hold onto your handles</li>
+    </ul>
+<script>
+    "use strict";
+    var updateMessage = function() {
+        var newMessage = document.getElementById("message").value;
+        var oldMessage = document.getElementById("output").append( " " +newMessage);
+        // document.getElementById("output").innerHTML = "<br>" + oldMessage + newMessage;
+        document.getElementById("skillz").setAttribute("class", "highlight");
+    }
+</script>
+</body>
+</html>
