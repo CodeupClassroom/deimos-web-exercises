@@ -13,12 +13,13 @@ document.getElementById("updateMessage").addEventListener("click", updateMessage
 
 var bananas = document.getElementsByClassName("banana");
 
-var handler = function() {
-    bananas[0].style.backgroundColor = randomColor();
-}
+
 
 for (var i = 0; i<bananas.length; i++) {
-    var j = i;
-    bananas[j].addEventListener("dblclick", handler)
+    (function(j) {
+        bananas[j].addEventListener("dblclick", function() {
+            bananas[j].style.backgroundColor = randomColor();
+        })
+    })(i);
 }
 
