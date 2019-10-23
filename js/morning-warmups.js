@@ -15,7 +15,7 @@ function roundDownFloat(num) {
     }
 }
 
-console.log(roundDownFloat(3.14));
+// console.log(roundDownFloat(3.14));
 
 // Write a JavaScript function that takes in an input and returns true if the input is a string, at least 8 characters in length. It should return false for all other input.
 
@@ -23,7 +23,7 @@ function stringWithAtleastEightChar(str) {
     return typeof str === 'string' && str.length >= 8;
 }
 
-console.log(stringWithAtleastEightChar(88888888));
+// console.log(stringWithAtleastEightChar(88888888));
 
 
 // Write a JavaScript function that returns the quotient of two numbers, but only when passed two numbers. It should return false in all other cases.
@@ -36,9 +36,9 @@ function quotient(n, m) {
     }
 }
 
-console.log(quotient(21,7), 3);
-console.log(quotient(21,"7"), false);
-console.log(quotient("21",7), false);
+// console.log(quotient(21,7), 3);
+// console.log(quotient(21,"7"), false);
+// console.log(quotient("21",7), false);
 
 
 // Write a JavaScript function returns the message, “Hello there, stranger.” Alert the return from this function. Refactor so that it returns “Hello there, “ concatenated to an argument. Prompt the user to input a string, call the function, and alert the return. Refactor so that the function has ‘stranger’ as a default value for the parameter.
@@ -65,10 +65,10 @@ function isEvenPositiveNum(num) {
     return num % 2 === 0 && num > 0;
 }
 
-console.log(isEvenPositiveNum(2));
-console.log(isEvenPositiveNum(5));
-console.log(isEvenPositiveNum(-8));
-console.log(isEvenPositiveNum(0));
+// console.log(isEvenPositiveNum(2));
+// console.log(isEvenPositiveNum(5));
+// console.log(isEvenPositiveNum(-8));
+// console.log(isEvenPositiveNum(0));
 
 function checkType(x){
     return typeof(x);
@@ -78,7 +78,7 @@ function perimeterQuadrilateral(s1,s2,s3,s4) {
     return s1 + s2 + s3 + s4;
 }
 
-console.log(perimeterQuadrilateral(3, 2, 5, 7));
+// console.log(perimeterQuadrilateral(3, 2, 5, 7));
 
 //Write a function that returns the area of a circle when passed the diameter
 function areaCircleDiameter(d) {
@@ -86,56 +86,56 @@ function areaCircleDiameter(d) {
     return 3.14 * Math.pow(radius, 2);
 }
 
-console.log(areaCircleDiameter(5));
+// console.log(areaCircleDiameter(5));
 
 // write a function that takes in a string and returns it upper-cased
 function upperCase(string) {
     return string.toUpperCase()
 }
 
-console.log(upperCase("Bill"));
-console.log(upperCase("pineapple"));
-console.log(upperCase("pIZza THymE"));
+// console.log(upperCase("Bill"));
+// console.log(upperCase("pineapple"));
+// console.log(upperCase("pIZza THymE"));
 
 //write a function that concatenates 3 strings
 function concatenateThree(a,b,c){
     return a + " " + b + " " + c;
 }
 
-console.log(concatenateThree("Good", "Morning", "Deimos"));
+// console.log(concatenateThree("Good", "Morning", "Deimos"));
 
 function equilateralTriangleArea(num) {
     return triangleArea(num,num,num);
 }
 
-console.log(equilateralTriangleArea(3));
-console.log(triangleArea(3,3,3));
+// console.log(equilateralTriangleArea(3));
+// console.log(triangleArea(3,3,3));
 
 function firstElement(arr) {
     return arr[0];
 }
 
-console.log(firstElement([1,2,3,4]));
+// console.log(firstElement([1,2,3,4]));
 
 function sayHi(){
     return "Hi";
 }
 
-console.log(sayHi());
+// console.log(sayHi());
 
 function sayHello(name) {
     return "Hello, " + name + "."
 }
 
-console.log(sayHello("David"));
+// console.log(sayHello("David"));
 
 function sum(num1, num2) {
     var sum = num1 + num2;
     return sum;
 }
 
-console.log(sum(2,2));
-console.log(sum(3,4));
+// console.log(sum(2,2));
+// console.log(sum(3,4));
 
 //write function to find the area of a triangle
 //this function takes in 3 parameters
@@ -148,7 +148,7 @@ function triangleArea(a,b,c){
     return area;
 }
 //console log to see the result
-console.log(triangleArea(5, 6, 7));
+// console.log(triangleArea(5, 6, 7));
 
 //write a function that accepts an array and returns the length of that array
 
@@ -173,7 +173,47 @@ function logArray(arrayInput){
 
 }
 
-logArray([1, 2, 3, 4, 5])
+// logArray([1, 2, 3, 4, 5])
+
+
+
+// Write a function called createPersonObject that takes in a name (that is a string) and an age (that is a number) and returns a person object containing the name and age.
+
+
+
+// function createPersonObject(name, age){
+//     var personObject = {};
+//     personObject.name = name;
+//     personObject.age = age;
+//
+//     return personObject;
+//
+// }
+
+
+function createPersonObject(name, age){
+    return {
+        name: name,
+        age: age
+    }
+}
+
+console.log(createPersonObject("Hannah", 50));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
