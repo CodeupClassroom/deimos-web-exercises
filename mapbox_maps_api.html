@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>First Mapbox Map</title>
+	<!-- Mapbox CSS -->
+	<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
+	<!-- Custom CSS -->
+	<style>
+		#map {
+			/* the width and height may be set to any size */
+			width: 100%;
+			height: 700px;
+		}
+	</style>
+</head>
+<body>
+
+<h1>My First Mapbox Map!</h1>
+
+<!-- The HTML element that serves as the Mapbox container -->
+<div id='map'></div>
+
+<!-- Mapbox JS -->
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+<script src="js/keys.js"></script>
+<script src="js/mapbox-geocoder-utils.js"></script>
+
+<!-- Custom JS -->
+<script>
+	mapboxgl.accessToken = mapboxToken;
+	var map = new mapboxgl.Map({
+		container: 'map',
+		style: 'mapbox://styles/mapbox/streets-v9',
+		zoom: 10,
+		center: [-98.4916, 29.4252]
+	});
+
+
+	// var faveRest1 = {
+	// 	address: "5146 Broadway St, San Antonio, TX 78209",
+	// 	popupHTML: "<p>Sorrento Pizza & Restaurant\n</p>"
+	// };
+	//
+	// var faveRest2 = {
+	// 	address: "3021 MacArthur View, San Antonio, TX 78217",
+	// 	popupHTML: "<p>Last Slice Pizza\n</p>"
+	// }
+	//
+	// var faveRest3 = {
+	// 	address: "2818 West Ave, San Antonio, TX 78201",
+	// 	popupHTML: "<p>Tacos West Ave\n</p>"
+	// }
+
+	// Generate a map that shows the city with your favorite restaurant using geocoding.
+	// geocode(faveRest1.address, mapboxToken).then(function(coordinates) {
+	// 	var popup = new mapboxgl.Popup()
+	// 		.setHTML(faveRest1.popupHTML);
+	//
+	// 	var marker = new mapboxgl.Marker()
+	// 		.setLngLat(coordinates)
+	// 		.setPopup(popup)
+	// 		.addTo(map)
+	// });
+	//
+	// geocode(faveRest2.address, mapboxToken).then(function(coordinates) {
+	// 	var popup = new mapboxgl.Popup()
+	// 		.setHTML(faveRest2.popupHTML);
+	//
+	// 	var marker = new mapboxgl.Marker()
+	// 		.setLngLat(coordinates)
+	// 		.setPopup(popup)
+	// 		.addTo(map)
+	// });
+	//
+	// geocode(faveRest3.address, mapboxToken).then(function(coordinates) {
+	// 	var popup = new mapboxgl.Popup()
+	// 		.setHTML(faveRest3.popupHTML);
+	//
+	// 	var marker = new mapboxgl.Marker()
+	// 		.setLngLat(coordinates)
+	// 		.setPopup(popup)
+	// 		.addTo(map)
+	// });
+
+
+	var restArray = [
+		{
+			address: "5146 Broadway St, San Antonio, TX 78209",
+			popupHTML: "<p>Sorrento Pizza & Restaurant\n</p>"
+		},
+		{
+			address: "3021 MacArthur View, San Antonio, TX 78217",
+			popupHTML: "<p>Last Slice Pizza\n</p>"
+		},
+	 	{
+			address: "2818 West Ave, San Antonio, TX 78201",
+			popupHTML: "<p>Tacos West Ave <br> 2818 West Ave, San Antonio, TX 78201</p>"
+		}
+	]
+
+	restArray.forEach(function (rest) {
+		console.log(rest);
+
+		geocode(rest.address, mapboxToken).then(function(coordinates) {
+			var popup = new mapboxgl.Popup()
+				.setHTML(rest.popupHTML);
+
+			var marker = new mapboxgl.Marker()
+				.setLngLat(coordinates)
+				.setPopup(popup)
+				.addTo(map)
+		});
+
+
+	})
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
