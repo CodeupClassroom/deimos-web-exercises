@@ -9,7 +9,10 @@ document.getElementById('importanter-circle').addEventListener('click', function
 // With jQuery, we can do it even easier!
 
 $('#important-circle').click(function() {
-    $(this).css('background-image','url(img/io.png)').css('background-size','cover');
+    $(this).css({
+        'background-image': 'url(img/io.png)',
+        'background-size': 'cover'
+    });
 });
 
 // When we click on the smaller circle, the background image changes! Note that we can use the this keyword as well!
