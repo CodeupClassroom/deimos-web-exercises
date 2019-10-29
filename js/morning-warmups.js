@@ -1,5 +1,59 @@
 // "use strict";
 
+// Write a JavaScript function that will return the shopping cart object with the most oranges.
+
+var shoppingCarts = [
+    {
+        apples: 8,
+        bananas: 2,
+        oranges: 4,
+        grapes: 24
+    }, {
+        apples: 3,
+        bananas: 6,
+        oranges: 8,
+        grapes: 12
+    } , {
+        apples: 0,
+        bananas: 12,
+        oranges: 0,
+        grapes: 0
+    } , {
+        apples: 4,
+        bananas: 0,
+        oranges: 12,
+        grapes: 10
+    }
+];
+
+function mostOranges(carts) {
+    var solution = [];
+    var winner = carts[0];
+    var winningI = -1;
+    carts.forEach(function(cart, index) {
+        if (cart.oranges > winner.oranges) {
+            winner = cart;
+            winningI = index;
+        }
+    });
+    solution.push(winner, winningI);
+    return solution;
+}
+
+console.log(mostOranges(shoppingCarts));
+
+// Write a JavaScript function that will return the number 5, but only when passed the string ‘five’.
+
+function convertStringToNumFive(five) {
+    if (five === 'five') {
+        return 5;
+    }
+}
+
+console.log(convertStringToNumFive('five'), 5);
+console.log(convertStringToNumFive('three'), undefined);
+console.log(convertStringToNumFive('5'), undefined);
+
 // Write FizzBuzz in JavaScript.
 
 function fizzBuzz(num) {
@@ -16,7 +70,7 @@ function fizzBuzz(num) {
     }
 }
 
-fizzBuzz(100);
+// fizzBuzz(100);
 
 function countUp(x){
     for(var i = 1; i <= x; i++){
@@ -182,11 +236,11 @@ function arrayLength(array){
 
 function logArray(arrayInput){
     // console.log(arrayInput);
-    console.log(arrayInput[0]);
-    console.log(arrayInput[1]);
-    console.log(arrayInput[2]);
-    console.log(arrayInput[3]);
-    console.log(arrayInput[4]);
+    // console.log(arrayInput[0]);
+    // console.log(arrayInput[1]);
+    // console.log(arrayInput[2]);
+    // console.log(arrayInput[3]);
+    // console.log(arrayInput[4]);
 
 
 }
@@ -216,12 +270,53 @@ function createPersonObject(name, age){
     }
 }
 
-console.log(createPersonObject("Hannah", 50));
+// console.log(createPersonObject("Hannah", 50));
 
 
 
+// Write a JavaScript function that accepts an array of student objects and returns an array of student objects that are not registered for class.
+
+var students = [
+    {
+        name: "Mary",
+        grade: 10,
+        gpa: 3.7,
+        isRegistered: true
+    },
+    {
+        name: "Tim",
+        grade: 12,
+        gpa: 3.2,
+        isRegistered: false
+    },
+    {
+        name: "Ellie",
+        grade: 9,
+        gpa: 4.0,
+        isRegistered: false
+    },
+    {
+        name: "Alex",
+        grade: 10,
+        gpa: 3.9,
+        isRegistered: true
+    }
+]
 
 
+function checkRegistration(studentArray){
+    var bucket = []
+
+    studentArray.forEach(function (student) {
+        if(!student.isRegistered){
+            bucket.push(student);
+        }
+    });
+
+    return bucket;
+}
+
+// console.log(checkRegistration(students));
 
 
 
