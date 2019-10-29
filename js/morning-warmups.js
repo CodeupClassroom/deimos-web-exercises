@@ -16,7 +16,7 @@ function fizzBuzz(num) {
     }
 }
 
-fizzBuzz(100);
+// fizzBuzz(100);
 
 function countUp(x){
     for(var i = 1; i <= x; i++){
@@ -182,11 +182,11 @@ function arrayLength(array){
 
 function logArray(arrayInput){
     // console.log(arrayInput);
-    console.log(arrayInput[0]);
-    console.log(arrayInput[1]);
-    console.log(arrayInput[2]);
-    console.log(arrayInput[3]);
-    console.log(arrayInput[4]);
+    // console.log(arrayInput[0]);
+    // console.log(arrayInput[1]);
+    // console.log(arrayInput[2]);
+    // console.log(arrayInput[3]);
+    // console.log(arrayInput[4]);
 
 
 }
@@ -216,12 +216,53 @@ function createPersonObject(name, age){
     }
 }
 
-console.log(createPersonObject("Hannah", 50));
+// console.log(createPersonObject("Hannah", 50));
 
 
 
+// Write a JavaScript function that accepts an array of student objects and returns an array of student objects that are not registered for class.
+
+var students = [
+    {
+        name: "Mary",
+        grade: 10,
+        gpa: 3.7,
+        isRegistered: true
+    },
+    {
+        name: "Tim",
+        grade: 12,
+        gpa: 3.2,
+        isRegistered: false
+    },
+    {
+        name: "Ellie",
+        grade: 9,
+        gpa: 4.0,
+        isRegistered: false
+    },
+    {
+        name: "Alex",
+        grade: 10,
+        gpa: 3.9,
+        isRegistered: true
+    }
+]
 
 
+function checkRegistration(studentArray){
+    var bucket = []
+
+    studentArray.forEach(function (student) {
+        if(!student.isRegistered){
+            bucket.push(student);
+        }
+    });
+
+    return bucket;
+}
+
+// console.log(checkRegistration(students));
 
 
 
