@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+</head>
+<body>
+	<h1 id="pastry-header" class="main-headers codeup">Cody's Pastry Shop</h1>
+
+	<div id="main-container">
+		<p id="welcome-paragraph" class="codeup">Welcome to my pastry shop! At a young age I started baking and loved it! Now I have my own pastry shop and look forward to providing you with the best pastries in town!</p>
+
+		<br>
+
+		<h4 class="main-headers" id="pastry-list-header">List of Pastries</h4>
+		<ul id="pastry-list">
+			<li class="pastry-item" id="cupcake-item">Cupcakes</li>
+			<li class="pastry-item" id="lemon-tart-item">Lemon Tart</li>
+			<li class="pastry-item" id="pie-item">Pie</li>
+			<li class="pastry-item" id="breakfast-muffin">Breakfast Muffin</li>
+		</ul>
+
+		<br>
+
+		<h4 class="main-headers" id="events-list-header">Upcoming Events</h4>
+		<ul id="events-list">
+			<li class="event-item" id="trick-event">Trunk or Treat!</li>
+			<li class="event-item" id="thanks-event">Give Thanks Pastry Swap</li>
+			<li class="event-item" id="cookies-event">Cookies with Santa</li>
+		</ul>
+
+	</div>
+
+
+	<script src="js/jquery-2.2.4.js"></script>
+
+	<script>
+		$(document).ready(function() {
+			/**********************************************
+			 * 				ID SELECTORS
+			 *********************************************/
+
+			// TODO: Use jQuery to select an element by the id. Alert the contents of the element.
+			// var contents = $("#pastry-header").html()
+			// alert(contents)
+
+			// TODO: Update the jQuery code to select and alert a different id.
+
+			// TODO: Use the same id on 2 elements. How does this change the jQuery selection?
+			// var contents = $("#trick-event").html()
+			// console.log(contents);
+
+			// TODO: Remove the duplicate id. Each id should be unique on that page.
+
+
+			/**********************************************
+			 * 				CLASS SELECTORS
+			 *********************************************/
+			// TODO: Remove your custom jQuery code from previous exercises.
+
+			// TODO: Update your code so that at least 3 different elements have the same class named codeup.
+
+			// TODO: Using jQuery, create a border around all elements with the class codeup that is 1 pixel wide and red.
+			// $(".codeup").css("border", "1px solid red")
+
+
+			// TODO: Remove the class from one of the elements. Refresh and test that the border has been removed.
+
+			// TODO: Give another element an id of codeup. Does this element get a border now?
+
+
+			/**********************************************
+			 * 				ELEMENT SELECTORS
+			 *********************************************/
+
+			// TODO: Remove your custom jQuery code from previous exercises.
+
+			// TODO: Using jQuery, set the font-size of all li elements to 20px.
+			$('li').css('font-size', '20px');
+
+			// TODO: Craft selectors that highlight all the h1, p, and li elements.
+			// $('h1').css('background-color', 'lime');
+			// $('p').css('background-color', 'pink');
+			// $('li').css('background-color', 'gold');
+
+			// TODO: Create a jQuery statement to alert the contents of your h1 element(s).
+			var contents = $('h1').html();
+			// alert(contents);
+
+
+			/**********************************************
+			 * 				MULTIPLE SELECTORS
+			 *********************************************/
+			// TODO: Combine your selectors that highlight all the h1, p, and li elements.
+			$('hi, p, li').css('background-color', 'lawngreen')
+
+
+		});
+	</script>
+
+</body>
+</html>
