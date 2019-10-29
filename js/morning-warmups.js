@@ -1,5 +1,59 @@
 // "use strict";
 
+// Write a JavaScript function that will return the shopping cart object with the most oranges.
+
+var shoppingCarts = [
+    {
+        apples: 8,
+        bananas: 2,
+        oranges: 4,
+        grapes: 24
+    }, {
+        apples: 3,
+        bananas: 6,
+        oranges: 8,
+        grapes: 12
+    } , {
+        apples: 0,
+        bananas: 12,
+        oranges: 0,
+        grapes: 0
+    } , {
+        apples: 4,
+        bananas: 0,
+        oranges: 12,
+        grapes: 10
+    }
+];
+
+function mostOranges(carts) {
+    var solution = [];
+    var winner = carts[0];
+    var winningI = -1;
+    carts.forEach(function(cart, index) {
+        if (cart.oranges > winner.oranges) {
+            winner = cart;
+            winningI = index;
+        }
+    });
+    solution.push(winner, winningI);
+    return solution;
+}
+
+console.log(mostOranges(shoppingCarts));
+
+// Write a JavaScript function that will return the number 5, but only when passed the string ‘five’.
+
+function convertStringToNumFive(five) {
+    if (five === 'five') {
+        return 5;
+    }
+}
+
+console.log(convertStringToNumFive('five'), 5);
+console.log(convertStringToNumFive('three'), undefined);
+console.log(convertStringToNumFive('5'), undefined);
+
 // Write FizzBuzz in JavaScript.
 
 function fizzBuzz(num) {
