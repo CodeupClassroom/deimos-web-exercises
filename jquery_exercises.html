@@ -37,67 +37,87 @@
 
 	<script src="js/jquery-2.2.4.js"></script>
 
+	<!-- Selectors Exercise -->
+<!--	<script>-->
+<!--		$(document).ready(function() {-->
+<!--			/**********************************************-->
+<!--			 * 				ID SELECTORS-->
+<!--			 *********************************************/-->
+
+<!--			// TODO: Use jQuery to select an element by the id. Alert the contents of the element.-->
+<!--			// var contents = $("#pastry-header").html()-->
+<!--			// alert(contents)-->
+
+<!--			// TODO: Update the jQuery code to select and alert a different id.-->
+
+<!--			// TODO: Use the same id on 2 elements. How does this change the jQuery selection?-->
+<!--			// var contents = $("#trick-event").html()-->
+<!--			// console.log(contents);-->
+
+<!--			// TODO: Remove the duplicate id. Each id should be unique on that page.-->
+
+
+<!--			/**********************************************-->
+<!--			 * 				CLASS SELECTORS-->
+<!--			 *********************************************/-->
+<!--			// TODO: Remove your custom jQuery code from previous exercises.-->
+
+<!--			// TODO: Update your code so that at least 3 different elements have the same class named codeup.-->
+
+<!--			// TODO: Using jQuery, create a border around all elements with the class codeup that is 1 pixel wide and red.-->
+<!--			// $(".codeup").css("border", "1px solid red")-->
+
+
+<!--			// TODO: Remove the class from one of the elements. Refresh and test that the border has been removed.-->
+
+<!--			// TODO: Give another element an id of codeup. Does this element get a border now?-->
+
+
+<!--			/**********************************************-->
+<!--			 * 				ELEMENT SELECTORS-->
+<!--			 *********************************************/-->
+
+<!--			// TODO: Remove your custom jQuery code from previous exercises.-->
+
+<!--			// TODO: Using jQuery, set the font-size of all li elements to 20px.-->
+<!--			$('li').css('font-size', '20px');-->
+
+<!--			// TODO: Craft selectors that highlight all the h1, p, and li elements.-->
+<!--			// $('h1').css('background-color', 'lime');-->
+<!--			// $('p').css('background-color', 'pink');-->
+<!--			// $('li').css('background-color', 'gold');-->
+
+<!--			// TODO: Create a jQuery statement to alert the contents of your h1 element(s).-->
+<!--			var contents = $('h1').html();-->
+<!--			// alert(contents);-->
+
+
+<!--			/**********************************************-->
+<!--			 * 				MULTIPLE SELECTORS-->
+<!--			 *********************************************/-->
+<!--			// TODO: Combine your selectors that highlight all the h1, p, and li elements.-->
+<!--			$('hi, p, li').css('background-color', 'lawngreen')-->
+
+
+<!--		});-->
+<!--	</script>-->
+
+	<!-- Mouse Events Exercise -->
 	<script>
 		$(document).ready(function() {
-			/**********************************************
-			 * 				ID SELECTORS
-			 *********************************************/
+			$('h1').click(function () {
+				$(this).css('background-color', 'palevioletred');
+			});
 
-			// TODO: Use jQuery to select an element by the id. Alert the contents of the element.
-			// var contents = $("#pastry-header").html()
-			// alert(contents)
+			jQuery('p').dblclick(function() {
+				$(this).css('font-size', '18px');
+			});
 
-			// TODO: Update the jQuery code to select and alert a different id.
-
-			// TODO: Use the same id on 2 elements. How does this change the jQuery selection?
-			// var contents = $("#trick-event").html()
-			// console.log(contents);
-
-			// TODO: Remove the duplicate id. Each id should be unique on that page.
-
-
-			/**********************************************
-			 * 				CLASS SELECTORS
-			 *********************************************/
-			// TODO: Remove your custom jQuery code from previous exercises.
-
-			// TODO: Update your code so that at least 3 different elements have the same class named codeup.
-
-			// TODO: Using jQuery, create a border around all elements with the class codeup that is 1 pixel wide and red.
-			// $(".codeup").css("border", "1px solid red")
-
-
-			// TODO: Remove the class from one of the elements. Refresh and test that the border has been removed.
-
-			// TODO: Give another element an id of codeup. Does this element get a border now?
-
-
-			/**********************************************
-			 * 				ELEMENT SELECTORS
-			 *********************************************/
-
-			// TODO: Remove your custom jQuery code from previous exercises.
-
-			// TODO: Using jQuery, set the font-size of all li elements to 20px.
-			$('li').css('font-size', '20px');
-
-			// TODO: Craft selectors that highlight all the h1, p, and li elements.
-			// $('h1').css('background-color', 'lime');
-			// $('p').css('background-color', 'pink');
-			// $('li').css('background-color', 'gold');
-
-			// TODO: Create a jQuery statement to alert the contents of your h1 element(s).
-			var contents = $('h1').html();
-			// alert(contents);
-
-
-			/**********************************************
-			 * 				MULTIPLE SELECTORS
-			 *********************************************/
-			// TODO: Combine your selectors that highlight all the h1, p, and li elements.
-			$('hi, p, li').css('background-color', 'lawngreen')
-
-
+			$('li').hover(function () {
+				$(this).css('color', 'red');
+			}, function() {
+				$(this).css('color', 'black');
+			})
 		});
 	</script>
 
