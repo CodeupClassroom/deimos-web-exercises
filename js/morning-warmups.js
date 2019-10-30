@@ -1,5 +1,49 @@
 // "use strict";
 
+// Write a JavaScript function that will return an array of hamster objects sorted by height in ascending order.
+
+var hamsters = [
+    {
+        name: "Hamtaro",
+        heightInMM: 86,
+        fur: ['orange', 'white'],
+        gender: "male",
+        dateOfBirth: "August 6"
+    } , {
+        name: "Bijou",
+        heightInMM: 75,
+        fur: ['white'],
+        gender: "female",
+        dateOfBirth: "July 10"
+    } , {
+        name: "Oxnard",
+        heightInMM: 100,
+        fur: ['grey', 'white'],
+        gender: "male",
+        dateOfBirth: "May 3"
+    } , {
+        name: "Boss",
+        heightInMM: 120,
+        fur: ['brown', 'white'],
+        gender: "male",
+        dateOfBirth: "Spetember 21"
+    } , {
+        name: "Snoozer",
+        heightInMM: 85,
+        fur: ['brown', 'white', "pink"],
+        gender: "male",
+        dateOfBirth: "January 14"
+    }
+];
+
+function hamHamsByHeight(hamHams) {
+    return hamHams.sort(function(a,b) {
+        return a.heightInMM - b.heightInMM;
+    });
+}
+
+console.log(hamHamsByHeight(hamsters));
+
 // Write a JavaScript function that will return the shopping cart object with the most oranges.
 
 var shoppingCarts = [
@@ -40,7 +84,7 @@ function mostOranges(carts) {
     return solution;
 }
 
-console.log(mostOranges(shoppingCarts));
+// console.log(mostOranges(shoppingCarts));
 
 // Write a JavaScript function that will return the number 5, but only when passed the string ‘five’.
 
@@ -50,9 +94,9 @@ function convertStringToNumFive(five) {
     }
 }
 
-console.log(convertStringToNumFive('five'), 5);
-console.log(convertStringToNumFive('three'), undefined);
-console.log(convertStringToNumFive('5'), undefined);
+// console.log(convertStringToNumFive('five'), 5);
+// console.log(convertStringToNumFive('three'), undefined);
+// console.log(convertStringToNumFive('5'), undefined);
 
 // Write FizzBuzz in JavaScript.
 
