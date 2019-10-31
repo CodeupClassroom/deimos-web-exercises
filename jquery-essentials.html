@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Essential Methods</title>
+    <link href="https://fonts.googleapis.com/css?family=Dosis&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            font-family: 'Dosis', sans-serif;
+            background-color: #373fff;
+        }
+        body.dark-mode {
+            background-color: #1B1B1B;
+            background-image: url(img/windows-gif.gif);
+            background-size: cover;
+            background-attachment: fixed;
+            color: whitesmoke;
+        }
+        header {
+            margin: 0;
+        }
+        nav {
+            margin: 0;
+            display: flex;
+            justify-content: space-between;
+            align-content: center;
+            height: 5em;
+            background-color: #0fb784;
+            color: whitesmoke;
+            position: fixed;
+            top: 0;
+            width: 100vw;
+            padding: 3px;
+            border-bottom: #373fff 3px solid;
+        }
+        .dark-mode nav {
+            background-color: #1B1B1B;
+            border-bottom-color: #FE6700;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+        }
+        nav li {
+            display: inline-block;
+            margin: .4em;
+        }
+        a {
+            text-decoration: none;
+            color: whitesmoke;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        a:hover {
+            color: #373fff;
+        }
+        main {
+            margin-top: 4.5em;
+            width: 80vw;
+            margin-left: 10vw;
+            background: whitesmoke;
+            color: #1B1B1B;
+            padding: 30px;
+        }
+        .dark-mode main {
+            background-color: #1B1B1B;
+            color: whitesmoke;
+            box-shadow: #FE6700 0 5px 20px;
+
+        }
+        h1 {
+            font-size: 3em;
+        }
+        p {
+            font-size: 1.5em;
+        }
+        .cool-stuff {
+            color: #0fb784;
+        }
+        .dark-mode .cool-stuff {
+            color: #FE6700;
+        }
+        main ul {
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Market</a></li>
+                <li><a href="#">Information</a></li>
+                <li><a href="#">Articles</a></li>
+                <li><a href="#">Careers</a></li>
+            </ul>
+            <h2 class="big-title">
+                Stegosaurus Rx
+            </h2>
+            <ul>
+                <li>Social Media</li>
+                <li><a href="#" target="_blank"><i class="fab fa-twitter-square"></i> Twitter</a></li>
+                <li><a href="https://www.linkedin.com/in/david-a-stephens/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                <li><a href="#" target="_blank"><i class="fab fa-facebook-square"></i> Facebook</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Test</h1>
+        <p>
+            God help us, we're in the hands of engineers. This thing comes fully loaded. AM/FM radio, reclining bucket seats, and... power windows. So you two dig up, dig up dinosaurs? Just my luck, no ice. Is this my espresso machine? Wh-what is-h-how did you get my espresso machine?
+
+            Do you have any idea how long it takes those cups to decompose. Hey, you know how I'm, like, always trying to save the planet? Here's my chance. My dad once told me, laugh and the world laughs with you, Cry, and I'll give you something to cry about you little bastard!
+
+            We gotta burn the rain forest, dump toxic waste, pollute the air, and rip up the OZONE! 'Cause maybe if we screw up this planet enough, they won't want it anymore! You really think you can fly that thing? Must go faster. Remind me to thank John for a lovely weekend.
+
+            I was part of something special. Life finds a way. Checkmate... Must go faster... go, go, go, go, go! We gotta burn the rain forest, dump toxic waste, pollute the air, and rip up the OZONE! 'Cause maybe if we screw up this planet enough, they won't want it anymore!
+
+            Remind me to thank John for a lovely weekend. Yeah, but your scientists were so preoccupied with whether or not they could, they didn't stop to think if they should. You're a very talented young man, with your own clever thoughts and ideas. Do you need a manager?
+        </p>
+
+        <h1>Test</h1>
+        <p>
+            Just my luck, no ice. You know what? It is beets. I've crashed into a beet truck. I gave it a cold? I gave it a virus. A computer virus. God creates dinosaurs. God destroys dinosaurs. God creates Man. Man destroys God. Man creates Dinosaurs. Hey, take a look at the earthlings. Goodbye!
+
+            So you two dig up, dig up dinosaurs? Hey, take a look at the earthlings. Goodbye! Yeah, but your scientists were so preoccupied with whether or not they could, they didn't stop to think if they should. Just my luck, no ice. Did he just throw my cat out of the window?
+
+            Just my luck, no ice. This thing comes fully loaded. AM/FM radio, reclining bucket seats, and... power windows. Must go faster. Must go faster. Forget the fat lady! You're obsessed with the fat lady! Drive us out of here! Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!
+
+            Eventually, you do plan to have dinosaurs on your dinosaur tour, right? So you two dig up, dig up dinosaurs? I gave it a cold? I gave it a virus. A computer virus. Yeah, but your scientists were so preoccupied with whether or not they could, they didn't stop to think if they should.
+
+            Yeah, but John, if The Pirates of the Caribbean breaks down, the pirates don’t eat the tourists. So you two dig up, dig up dinosaurs? You really think you can fly that thing? I was part of something special. Do you have any idea how long it takes those cups to decompose.
+        </p>
+
+        <h2>Let's Talk about Cheese!</h2>
+        <ul id="cheeses">
+            <li>Muenster</li>
+            <li>Mozzarella</li>
+            <li>Nut Rebel</li>
+            <li>Pepper Jack</li>
+            <li>Colby Jack</li>
+            <li>Kraft American Singles</li>
+        </ul>
+    </main>
+    <footer></footer>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script>
+        "use strict";
+
+        $(".big-title").dblclick(function () {
+            $(this).html("Sabretooth Automotive");
+        });
+
+        var holdThis = $('main').html();
+
+        // console.log(holdThis);
+
+        $('main').html('<img src="img/glitter.jpg" alt="cool disney villain Ratcliffe"><h1>SEE HOW HE GLITTER!</h1>').append('<img src="img/pug.jpg" alt="a good doggie">').prepend('<img src="img/ratcliffe.jpg" alt="cool disney villain Ratcliffe">').prepend('<img src="img/ratcliffe_again.jpg" alt="cool disney villain Ratcliffe">').prepend('<h1>The pug image is too big, halp!</h1>').append(holdThis);
+
+
+
+
+
+
+
+
+
+
+
+        $("h1").click(function() {
+            if ($('body').hasClass("dark-mode")) {
+                $(this).css({
+                    "color": "#FE6700",
+                    "text-decoration": "underline"
+                })
+            } else {
+                $(this).css({
+                    "color": "#373fff",
+                    "text-decoration": "underline"
+                })
+            }
+        });
+
+        $("p").addClass('cool-stuff');
+
+        $(".cool-stuff").click(function() {
+            $(this).removeClass('cool-stuff');
+        });
+
+        $(document).keypress(function(e) {
+            console.log(e);
+            if (e.key === "f") {
+                $('body').toggleClass("dark-mode");
+            }
+        });
+
+        // $('li').each(function (i) {
+        //     if (i % 2 === 0) {
+        //         $(this).css("color", "blue");
+        //     }
+        // });
+        //
+        // $('h1').first().html("First");
+        //
+        // $('h1').last().html("Last");
+
+        // $('ul').last().children().each(function(i) {
+        //     if (i % 2 !== 0) {
+        //         $(this).css('background', 'yellow');
+        //     }
+        // });
+
+        // $('ul').last().children().first().css('background', 'yellow');
+
+        // $('main').children('p').first().css('border', "2px solid palevioletred");
+
+        // $('p').first().parent().parent().html("I broke the page, oops");
+        // $('p').first().parents("body").html("I broke the page, oops");
+
+        // $('li').first().parent().next().html("Hello, I goofed the navbar.");
+
+    </script>
+</body>
+</html>
