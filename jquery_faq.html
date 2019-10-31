@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FAQ</title>
+    <link href="https://fonts.googleapis.com/css?family=Fira+Code&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Fira Code', monospace;
+            line-height: 1.5em;
+        }
+        .invisible {
+            visibility: hidden;
+        }
+        .highlighter {
+            background: #ef0;
+        }
+        body {
+            font-size: 1.25em;
+        }
+        dt {
+            font-weight: bold;
+        }
+        dd {
+            margin-bottom: 1.2em;
+        }
+        #styler {
+            position: relative;
+            top: 0;
+            left: 0;
+            transition: 1s;
+            font-size: 1em;
+            background-color: #3B94D9;
+            border: #30447B solid 5px;
+            color: aliceblue;
+            padding: 10px;
+            box-shadow: 5px 5px 10px black;
+        }
+        #styler:hover {
+            background-color: brown;
+            color: blanchedalmond;
+            border-color: orangered;
+            box-shadow: 0 0 5px black;
+            top: 5px;
+            left: 5px;
+        }
+        h2 {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<!--<div>-->
+<!--    <h1>Would you like to sign up for our newsletter?</h1>-->
+<!--<span id="hide-newsletter">&#x274C;</span>-->
+<!--</div>-->
+
+<!--<h2>Would you like to register for this site?</h2>-->
+<dl>
+    <dt>Lorem Park</dt>
+    <dd>Something something, blah blah.</dd>
+
+    <dt>Ipsum Lake</dt>
+    <dd>.halb halb, gnihtemos gnihtemoS</dd>
+
+    <dt>Computer Park</dt>
+    <dd>Look at all those Gateways...</dd>
+
+    <dt>Boiler Plate</dt>
+    <dd>This might be a bit plain...</dd>
+
+    <dt>Schmear Geyser</dt>
+    <dd>Get your bagels, my dudes.</dd>
+
+    <dt>Dab On 'Em Cliff</dt>
+    <dd>Cam Newton's fault, probably.</dd>
+
+    <dt>Astrodome</dt>
+    <dd>Houston baseball park.</dd>
+
+    <dt>Texas Cyclone</dt>
+    <dd>Was a cool roller coaster.</dd>
+
+    <dt>My Aunt Pam's House</dt>
+    <dd>They have a pomeranian.</dd>
+
+    <dt>Jellystone National Park</dt>
+    <dd>Yogi lives there.</dd>
+</dl>
+
+<button id="styler">Click to change some things!</button>
+<hr>
+
+<h3>Guadalupe River State Park</h3>
+<ul>
+    <li>Golden-cheeked warbler lives there.</li>
+    <li>Much River.</li>
+    <li>Very Wet.</li>
+    <li>Opened to the public in 1983.</li>
+</ul>
+<h3>McKinney Falls State Park</h3>
+<ul>
+    <li>Guadalupe spiny softshell turtle lives there.</li>
+    <li>Many Falls.</li>
+    <li>Very Wet.</li>
+    <li>In Austin before Austin was established.</li>
+</ul>
+<h3>Pedernales Falls State Park</h3>
+<ul>
+    <li>Has Animals???</li>
+    <li>Many Falls.</li>
+    <li>Not Very Wet (Sometimes).</li>
+    <li>I was dragged here by my Mom one time.</li>
+</ul>
+
+<button id="styler-2">Click me to highlight last list item</button>
+
+<script src="js/jquery-2.2.4.js"></script>
+<script>
+    $(document).ready(function() {
+        // $('dd').addClass('invisible');
+
+        $('#styler').click(function() {
+            $('dd').toggleClass('invisible');
+        });
+
+        $('dt').click(function () {
+            $(this).toggleClass('highlighter');
+        });
+
+        $('#styler-2').click(function() {
+            $('ul').each(function () {
+                $(this).children().last().css('background-color', 'palevioletred')
+            })
+        });
+
+        $('h3').click(function () {
+            $(this).next().children().css('font-weight', 'bold');
+        });
+
+        $('li').click(function () {
+            $(this).parent().children().first().css('color', 'steelblue');
+        })
+    });
+
+</script>
+
+</body>
+</html>
