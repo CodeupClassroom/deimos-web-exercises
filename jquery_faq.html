@@ -47,15 +47,18 @@
         h2 {
             display: none;
         }
+        ul {
+            display: none;
+        }
     </style>
 </head>
 <body>
-<!--<div>-->
-<!--    <h1>Would you like to sign up for our newsletter?</h1>-->
-<!--<span id="hide-newsletter">&#x274C;</span>-->
-<!--</div>-->
+<div>
+    <h1>Would you like to sign up for our newsletter?</h1>
+<span id="hide-newsletter">&#x274C;</span>
+</div>
 
-<!--<h2>Would you like to register for this site?</h2>-->
+<h2>Would you like to register for this site?</h2>
 <dl>
     <dt>Lorem Park</dt>
     <dd>Something something, blah blah.</dd>
@@ -135,13 +138,20 @@
         });
 
         $('h3').click(function () {
-            $(this).next().children().css('font-weight', 'bold');
+            // $(this).next().children().css('font-weight', 'bold');
+            $(this).next().slideToggle(500);
         });
 
         $('li').click(function () {
             $(this).parent().children().first().css('color', 'steelblue');
         })
     });
+
+    $('#hide-newsletter').click(function() {
+        $(this).parent().hide();
+    });
+
+    $('h2').delay(8000).fadeIn();
 
 </script>
 
