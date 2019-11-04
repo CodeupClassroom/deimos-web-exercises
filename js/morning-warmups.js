@@ -1,5 +1,39 @@
 // "use strict";
 
+// Write a JavaScript function that will take in a whole number from 1 - 10, and return the number spelled out as a string. (i.e. 1 returns ‘one’).
+
+function numAsWord(num) {
+    switch (num) {
+        case 1:
+            return 'one';
+        case 2:
+            return 'two';
+        case 3:
+            return 'three';
+        case 4:
+            return 'four';
+        case 5:
+            return 'five';
+        case 6:
+            return 'six';
+        case 7:
+            return 'seven';
+        case 8:
+            return 'eight';
+        case 9:
+            return 'nine';
+        case 10:
+            return 'ten';
+        default:
+            return false;
+    }
+}
+
+var randoNum = Math.floor(Math.random() * 10) + 1;
+
+console.log(numAsWord(randoNum));
+
+
 // Write a JavaScript function that will return an array of hamster objects sorted by height in ascending order.
 
 var hamsters = [
@@ -42,7 +76,7 @@ function hamHamsByHeight(hamHams) {
     });
 }
 
-console.log(hamHamsByHeight(hamsters));
+// console.log(hamHamsByHeight(hamsters));
 
 // Write a JavaScript function that will return the shopping cart object with the most oranges.
 

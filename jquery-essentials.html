@@ -95,6 +95,11 @@
         .coolest-stuff {
             color: #373fff;
         }
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
     </style>
 </head>
 <body>
@@ -167,7 +172,7 @@
 
         // console.log(holdThis);
 
-        $('main').html('<img src="img/glitter.jpg" alt="cool disney villain Ratcliffe"><h1>SEE HOW HE GLITTER!</h1>').append('<img src="img/pug.jpg" alt="a good doggie">').prepend('<img src="img/ratcliffe.jpg" alt="cool disney villain Ratcliffe">').prepend('<img src="img/ratcliffe_again.jpg" alt="cool disney villain Ratcliffe">').prepend('<h1>The pug image is too big, halp!</h1>').append(holdThis);
+        $('main').html('<img src="img/glitter.jpg" alt="cool disney villain Ratcliffe"><h1>SEE HOW HE GLITTER!</h1>').append('<img src="img/pug.jpg" alt="a good doggie" style="display: inline-block">').prepend('<img src="img/ratcliffe.jpg" alt="cool disney villain Ratcliffe">').prepend('<img src="img/ratcliffe_again.jpg" alt="cool disney villain Ratcliffe">').prepend('<h1>The pug image is too big, halp!</h1>').append(holdThis);
 
 
 
@@ -233,7 +238,20 @@
         // $('p').first().parent().parent().html("I broke the page, oops");
         // $('li').last().parents("body").html("I broke the page, oops");
 
-        $('li').first().parent().next('ul').html("Hello, I goofed the navbar.");
+        // $('li').first().parent().next('ul').html("Hello, I goofed the navbar.");
+
+        // EFFECTS IN JQUERY
+
+        // $('img').last().click(function () {
+        //     $(this).hide();
+        // });
+
+        $(document).keypress(function(e) {
+            if (e.key === 'j') {
+                $('img').first().next().slideToggle(1500);
+                $('img').first().next().fadeToggle(2000);
+            }
+        })
 
     </script>
 </body>
