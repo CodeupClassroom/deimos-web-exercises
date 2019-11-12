@@ -1,6 +1,35 @@
 // "use strict";
 
+// loop through array and return an array of all even numbers
+
+var myNumbers = [1,2,3,4,5,6,7,8];
+
+function evenNumbers(arr){
+    var newArray = [];
+    arr.forEach(function(num){
+        if(num % 2 === 0){
+            newArray.push(num);
+        }
+    });
+    return newArray;
+}
+
+console.log(evenNumbers(myNumbers));
+
 // Write a JavaScript function that will take in a whole number from 1 - 10, and return the number spelled out as a string. (i.e. 1 returns ‘one’).
+
+var myObject = {
+  gratitude: "Thank you"
+};
+
+function sayWelcome(obj){
+    if(obj.gratitude === "Thank you"){
+        return "You're welcome";
+    }
+}
+
+console.log(sayWelcome(myObject));;
+
 
 function numAsWord(num) {
     switch (num) {
