@@ -15,6 +15,14 @@ function evenNumbers(arr){
 }
 
 console.log(evenNumbers(myNumbers));
+// Write a JavaScript function that returns a random boolean.
+
+function randomBoolean() {
+    return Boolean(Math.floor(Math.random() * 2));
+}
+
+console.log(randomBoolean());
+
 
 // Write a JavaScript function that will take in a whole number from 1 - 10, and return the number spelled out as a string. (i.e. 1 returns ‘one’).
 
@@ -60,7 +68,7 @@ function numAsWord(num) {
 
 var randoNum = Math.floor(Math.random() * 10) + 1;
 
-console.log(numAsWord(randoNum));
+// console.log(numAsWord(randoNum));
 
 
 // Write a JavaScript function that will return an array of hamster objects sorted by height in ascending order.
