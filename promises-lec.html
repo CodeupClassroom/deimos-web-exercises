@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Promises in JS</title>
+    <link href="https://fonts.googleapis.com/css?family=Lekton" rel="stylesheet">
+    <style>
+        body {
+            background-color: darkslategrey;
+            color: burlywood;
+            font-family: 'Lekton', sans-serif;
+        }
+        .grandpa {
+            background-color: brown;
+            height: 8.85em;
+            width: 74.73em;
+            box-shadow: 4px 4px 9px black;
+        }
+        .dad {
+            background-color: chocolate;
+            display: inline-block;
+            height: 7.25em;
+        }
+        .son {
+            background-color: peru;
+            display: inline-block;
+            height: 7.25em;
+            position: relative;
+            top: .75em;
+            left: .75em;
+        }
+        h1 {
+            position: relative;
+            display: inline-block;
+            background-color: burlywood;
+            margin: 0;
+            font-size: 6em;
+            top: .125em;
+            left: .125em;
+            padding: 10px 10px 12px 10px;
+            color: darkslategrey;
+        }
+        .circle {
+            border-radius: 50%;
+            box-shadow: 4px 4px 9px black;
+        }
+        .grandma {
+            height: 400px;
+            width: 400px;
+            background: url("img/jupiter.webp");
+            background-size: cover;
+            position: absolute;
+            bottom: 12px;
+            right: 20px;
+        }
+        .daughter {
+            height: 120px;
+            width: 120px;
+            background: chocolate;
+            position: absolute;
+            bottom: 90px;
+            right: 420px;
+        }
+        .grand-daughter {
+            height: 70px;
+            width: 70px;
+            background: brown;
+            position: absolute;
+            bottom:-80px;
+            right: -50px;
+        }
+        .push {
+            position: relative;
+            top: 30px;
+        }
+        button {
+            color: burlywood;
+            background-color: brown;
+            border: 4px solid chocolate;
+            font-size: 1.25em;
+            font-family: 'Lekton', sans-serif;
+            padding: 10px;
+            box-shadow: 5px 5px 10px #1b2b2b;
+            transition: 1s;
+            left: 0;
+        }
+        button:hover {
+            color: darkcyan;
+            background: darkslategrey;
+            border: 4px solid cadetblue;
+            box-shadow: 0 0 5px #1b2b2b;
+            top: 35px;
+            left: 5px;
+        }
+        input {
+            box-sizing: border-box;
+            display: block;
+            padding: 8px;
+            font-size: 1.25em;
+            font-family: 'Lekton', sans-serif;
+            border: chocolate 4px solid;
+            background: darkslategrey;
+            color: burlywood;
+            margin-bottom: .5em;
+            width: 208px;
+            box-shadow: 5px 5px 10px #1b2b2b;
+        }
+        ::placeholder {
+            color: chocolate;
+        }
+        #picture-example {
+            height: 125px;
+        }
+        .over {
+            right: 25px;
+        }
+        .over2 {
+            right: 40px;
+        }
+        .over3 {
+            right: 50px;
+        }
+        .syl {
+            top: 35px;
+            right: 75px;
+        }
+        .slash {
+            top: 42px;
+            right: 120px;
+        }
+        .greymon {
+            position: relative;
+            top: 10px;
+            height: 129px;
+        }
+        .dark-magician {
+            position: relative;
+            top: 20px;
+            height: 112px;
+        }
+        .kazuya {
+            position: relative;
+            top: 20px;
+            height: 128px;
+        }
+        .pull {
+            position: relative;
+            bottom: 18px;
+        }
+    </style>
+</head>
+<body>
+<div class="grandpa">
+    <div class="dad">
+        <div class="son">
+            <h1>Promises in ECMAScript 6</h1>
+        </div>
+    </div>
+
+    <p class="push">Don't get distracted by the dots.</p>
+
+    <div id="picture-example">
+    </div>
+    <form action="">
+        <input class="push" id="imgName" name="imgName" type="text" placeholder="Pokémon Name">
+        <button id="submit" class="push">Click for picture!</button>
+    </form>
+
+
+    <div class="circle grandma">
+        <div class="circle mom">
+            <div id="importanter-circle" class="circle daughter">
+                <div id="important-circle" class="circle grand-daughter"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script src="js/promises-lec.js"></script>
+</body>
+</html>
