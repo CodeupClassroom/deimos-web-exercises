@@ -24,9 +24,6 @@ myPromise.catch(() => console.log("Aw..."));
 
 // Well, that's all fine and dandy, but let's try with a more robust example. Using promises and the .then method prevent use from having to enter what is known as 'Callback Hell.' Below I have the code of an example of making a call to the Pokemon API using AJAX in jQuery.
 
-
-// Notice how when we submit our form, it will fire a get request to the page. If we want the behavior we were looking for, we'll need to prevent the default behavior of a button in our form.
-
 // $('#submit').click(function(e) {
 //     e.preventDefault();
 //     $('#picture-example').html('<img src="img/Wedges-3s-200px.svg" alt="loading" class="kazuya">');
@@ -183,6 +180,6 @@ $('#submit').click(function(e) {
 
 // NOTE: You may have noticed I used a fetch before I changed the HTML. When I get back from a fetch request is the request itself, so I need to parse it into a readable stream (JSON). Here is a smaller example to illustrate:
 
-fetch('https://pokeapi.co/api/v2/pokemon/mewtwo').then(data => console.log(data));
+// fetch('https://pokeapi.co/api/v2/pokemon/mewtwo').then(data => console.log(data));
 
-// fetch('https://pokeapi.co/api/v2/pokemon/mewtwo').then(response => response.json()).then(data => console.log(data));
+fetch('https://pokeapi.co/api/v2/pokemon/mewtwo').then(response => response.json()).then(data => console.log(data));
