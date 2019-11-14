@@ -1,5 +1,23 @@
 // "use strict";
 
+// Write a function that returns a promise. The promise should resolve if the function takes in an even number, and reject if passed anything else.
+
+const evenPromise = num => {
+    return new Promise((resolve, reject) => {
+        if (num % 2 === 0) {
+            resolve(`Why yes, the number ${num} is an even number!`);
+        } else {
+            reject(`Woe is you. ${num} is not an even number.`);
+        }
+    })
+};
+
+let randoNum = Math.floor(Math.random() * 10) + 1;
+
+evenPromise(randoNum)
+    .then(message => console.log(message))
+    .catch(message => console.log(message));
+
 // loop through array and return an array of all even numbers
 
 var myNumbers = [1,2,3,4,5,6,7,8];
@@ -65,8 +83,6 @@ function numAsWord(num) {
             return false;
     }
 }
-
-var randoNum = Math.floor(Math.random() * 10) + 1;
 
 // console.log(numAsWord(randoNum));
 
